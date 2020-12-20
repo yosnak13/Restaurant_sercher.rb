@@ -17,3 +17,11 @@ customers = ["侍 太郎", "侍 次郎", "侍 三郎"]
 for customer in customers do
   puts customer
 end
+
+
+numlist = ['one', 'two', 'three']
+puts numlist[1]
+
+stringlist = []
+stringlist.append("samurai")
+puts stringlist
