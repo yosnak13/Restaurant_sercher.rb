@@ -1,4 +1,4 @@
-restaurants = "hogehoge"
+restaurants = []
 response = "hugahuga"
 
 
