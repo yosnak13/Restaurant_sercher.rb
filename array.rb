@@ -13,6 +13,7 @@
 
 customers = ["侍 太郎", "侍 次郎", "侍 三郎"]
 
+
 for customer in customers do
-    puts customer
+  puts customer
 end
