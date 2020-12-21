@@ -1,3 +1,10 @@
+def write_data_to_csv()
+  restaurants = []
+  response = 'hogehoge'
+  return print restaurants
+
+write_data_to_csv
+
 # {
 #     "@attributes": {
 #         "api_version": "v3"
