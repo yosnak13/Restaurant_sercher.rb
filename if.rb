@@ -38,18 +38,33 @@ num = 10
 
 # 演習2　空の配列enev_numとodd_numを作成。even_numは奇数の配列で、odd_numは偶数の配列。次に、引数の値が偶数の時と奇数の時で条件分岐させ、その値を作成したそれぞれのメソッドsort_numberを作成。
 
-even_num = []
-odd_num = []
+# even_num = []
+# odd_num = []
 
-def sort_number(num, even_num, odd_num)
-  if num % 2 == 0
-    even_num.push(num)
+# def sort_number(num, even_num, odd_num)
+#   if num % 2 == 0
+#     even_num.push(num)
+#   else
+#     odd_num.push(num)
+#   end
+# end
+
+# sort_number(21, even_num, odd_num)
+# sort_number(42, even_num, odd_num)
+
+# p odd_num
+
+# グローバル変数ver
+$even_num = []
+$odd_num = []
+
+def sort_number(num)
+  if num % 2 == 0 then
+    $even_num.append(num)
   else
-    odd_num.push(num)
+    $odd_num.append(num)
   end
 end
 
-sort_number(21, even_num, odd_num)
-sort_number(42, even_num, odd_num)
-
-p odd_num
+sort_number(31)
+puts $odd_num
