@@ -24,3 +24,13 @@ num = 10
 # else
 #   puts "numは10です"
 # end
+
+
+# 演習1　引数numの値が42の場合のみ、Answer to the Ultimate Question of Life, the Universe, and Everythingと出力するメソッドcheckを作成。
+def check(num)
+  if num == 42
+    puts 'Answer to the Ultimate Question of Life, the Universe, and Everything'
+  end
+end
+
+check(42)
