@@ -18,3 +18,11 @@ class Car
   end
 
 end
+
+car = Car.new()
+
+car.setName("セダン")
+
+car.show()
+
+puts Car.getName()
