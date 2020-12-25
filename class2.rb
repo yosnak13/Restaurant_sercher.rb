@@ -36,6 +36,8 @@
 # puts Hoge.getStr
 # puts Hoge.getNum
 
+
+
 # インスタンス変数
 class Hoge
     def initialize
