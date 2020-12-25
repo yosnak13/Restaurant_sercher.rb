@@ -36,6 +36,13 @@
 # puts Hoge.getStr
 # puts Hoge.getNum
 
+# インスタンス変数
+class Hoge
+    def initialize
+        @name = "大泉"
+        @age = 46
+    end
+end
 
 
 class Hoge
