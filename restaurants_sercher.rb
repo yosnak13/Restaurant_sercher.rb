@@ -12,7 +12,6 @@ def write_data_to_csv()
   File.open('restaurants_list.csv', 'W') do |file|
     file << restaurants
   end
-  
     return print restaurants
 end
 
