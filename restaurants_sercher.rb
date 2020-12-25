@@ -8,6 +8,11 @@ def write_data_to_csv()
     rest_name = restaurant['name']
     restaurants.append(rest_name)
   end
+
+  File.open('restaurants_list.csv', 'W') do |file|
+    file << restaurants
+  end
+  
     return print restaurants
 end
 
