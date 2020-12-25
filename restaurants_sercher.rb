@@ -2,7 +2,7 @@ require 'net/http'
 require 'json'
 
 # 初期設定
-KEYID = "1f19fb2ec4009251fef8fa7b4353473f"
+KEYID = ENV['GRNB_ACCESS_KEY']
 HIT_PER_PAGE = 100
 PREF = "PREF13"
 FREEWORD_CONDITION = 1
