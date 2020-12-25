@@ -1,6 +1,22 @@
-def write_data_to_csv()
+require 'net/http'
+require 'json'
+
+# 初期設定
+KEYID = "1f19fb2ec4009251fef8fa7b4353473f"
+HIT_PER_PAGE = 100
+PREF = "PREF13"
+FREEWORD_CONDITION = 1
+FREEWORD = "渋谷駅"
+PARAMS = {"keyid": KEYID, "hit_per_page":HIT_PER_PAGE, "pref":PREF, "freeword_condition":FREEWORD_CONDITION, "freeword":FREEWORD}
+
+
+def write_data_to_csv(params)
   restaurants = []
-  response = {hogehoge:'hogehoge'}
+  uri = URI.parse("https://api.gnavi.co.jp/RestSearchAPI/v3/")
+  uri.query = URI.encode_www_form(PARAMS)
+  json_res = Net::HTTP.get uri
+  response = JSON.load(json_res)
+
   if response.has_key?('error')then
     puts "エラーが発生しました"
   end
@@ -9,13 +25,13 @@ def write_data_to_csv()
     restaurants.append(rest_name)
   end
 
-  File.open('restaurants_list.csv', 'W') do |file|
+  File.open('restaurants_list.csv', 'w') do |file|
     file << restaurants
   end
-    return print restaurants
+  return puts restaurants
 end
 
-write_data_to_csv
+write_data_to_csv(PARAMS)
 
 # {
 #     "@attributes": {
